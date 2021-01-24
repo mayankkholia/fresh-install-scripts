@@ -1,6 +1,6 @@
 ##Update Repositories and install Docker
 sudo apt update
-sudo apt install -y docker.io
+sudo apt install -y docker.io htop
 sudo systemctl enable docker --now
 
 ## GitTools -- Dumping Git Repositories
