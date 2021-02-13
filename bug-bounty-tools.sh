@@ -3,6 +3,7 @@
 ## Update Repositories and other necessary tools
 sudo apt update
 sudo apt install -y htop bzip2 git ntmui nano vim tmux 
+sudo apt install golang
 echo 'Repo Updated'
 
 ## install docker
@@ -41,6 +42,11 @@ echo 'GitTools installed'
 sudo docker pull rustscan/rustscan:alpine
 echo 'rustscan installed via docker'
 
+## ffuf web application fuzzing tool
+go get -u github.com/ffuf/ffuf
+echo 'ffuf installed via GO'
+
+
 ## pwncat -- netcat on steroids
 cd /opt
 git clone https://github.com/calebstewart/pwncat.git
@@ -48,4 +54,4 @@ python3 -m venv pwncat-env
 source pwncat-env/bin/activate
 python setup.py install
 cd $HOME
-'pwncat installed'
+echo 'pwncat installed'
